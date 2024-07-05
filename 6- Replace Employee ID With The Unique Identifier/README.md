@@ -58,6 +58,7 @@ Output:
 | 2         | Meir     |
 | 3         | Winston  |
 | 1         | Jonathan |
+
 Explanation: 
 Alice and Bob do not have a unique ID, We will show null instead.
 The unique ID of Meir is 2.
