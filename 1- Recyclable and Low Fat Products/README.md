@@ -1,5 +1,6 @@
-Table: Products
+## Recyclable and Low Fat Products
 
+Table: Products
 
 | Column Name | Type    |
 | ----------- | ------- |
