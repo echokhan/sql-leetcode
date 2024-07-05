@@ -30,8 +30,6 @@ Return the result table sorted in any order.
 
 The result format is in the following example.
 
- 
-
 Example 1:
 
 Input: 
@@ -72,3 +70,11 @@ Customer with id = 30 visited the mall once and did not make any transactions.
 Customer with id = 54 visited the mall three times. During 2 visits they did not make any transactions, and during one visit they made 3 transactions.
 Customer with id = 96 visited the mall once and did not make any transactions.
 As we can see, users with IDs 30 and 96 visited the mall one time without making any transactions. Also, user 54 visited the mall twice and did not make any transactions.
+
+### Discussion
+This could have been attempting with a NOT IN subquery rather than a LEFT JOIN/ IS NULL. The choice can vary depending on the database engine and whether or not you need to consider how to handle NULLs in the right table (as opposed to the left one in the join).
+🍿 Null is not equal to anything—not even to another null . According to the three-valued logic of SQL, the result of null = null is not true but unknown.
+This results in the NOT IN issue, which is a simple consequence of three-valued logic, but it's not immediately intuitive. It's a well-known trap.
+🍿Therefore, in a scenario explained in the following [link](https://explainextended.com/2009/09/15/not-in-vs-not-exists-vs-left-join-is-null-sql-server/)
+we can compare NOT IN vs NOT EXISTS vs LEFT JOIN / IS NULL.
+🍿NOT IN cannot handle nullable columns on either side of the subquery, and the other two methods are more reliable. Unless you have non-nullable columns on boths sides, in which case you're okay to use any three methods.
