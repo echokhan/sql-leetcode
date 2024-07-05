@@ -38,3 +38,6 @@ Output:
 Explanation: 
 Tweet 1 has length = 14. It is a valid tweet.
 Tweet 2 has length = 32. It is an invalid tweet.
+
+### Discussion
+It is important to note that we are lucky to be working with T-SQL in this case. Therefore, LEN() works fine, as we wanted length of tweet in characters. However, in MySQL LENGTH() returns length of tweet in bytes not characters. Now this works with characters that are held in a single byte. However, if some characters require more than a byte, then the difference between LENGTH() AND CHAR_LENGTH() becomes prominent.
