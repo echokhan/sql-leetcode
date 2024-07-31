@@ -1,4 +1,4 @@
-## 48- Second Highest Salary
+## 47- Second Highest Salary
 Table: Employee
 
 
