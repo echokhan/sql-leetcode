@@ -1,4 +1,4 @@
-## 47- Delete Duplicate Emails
+## 46- Delete Duplicate Emails
 
 Table: Person
 
